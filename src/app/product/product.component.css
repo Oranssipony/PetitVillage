@@ -1,0 +1,12 @@
+.product-details {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }

@@ -1,0 +1,85 @@
+/* Généralités du header */
+header {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    width: 100%;  
+    padding: 10px 0;  
+    background-color: #FDD90B;  
+    position: relative;  
+    height: 100px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    z-index: 1;  
+    flex-wrap: wrap; /* Permet d'empiler les éléments en cas de petit écran */
+}
+
+.logo {
+    position: absolute;  
+    left: 50%;  
+    transform: translateX(-50%);  
+    height: 100px;  
+    width: auto;
+}
+
+.logo img {
+    height: 100%;  
+    width: auto;  
+    border-radius: 50%;  
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;  
+    font-size: 1.2em;
+    position: absolute;  
+    right: 20px;  
+}
+
+/* Style des liens de navigation */
+nav a {
+    background-color: #F9D0A3;
+    color: #151217;
+    border: 2px solid #DA001E;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #DA001E;
+    color: #F9D0A3;
+    transform: scale(1.05);  
+}
+
+/* Media query pour les petits écrans (mobile) */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;  /* Alignement entre logo et nav */
+        height: auto;  /* Permet d'adapter la hauteur du header */
+        padding: 15px;  /* Plus de padding pour mieux respirer sur mobile */
+    }
+
+    .logo {
+        position: static;  /* Retirer la position absolue du logo */
+        transform: none;  /* Pas de translation pour centrer */
+        height: 80px;  /* Ajuster la taille du logo sur mobile */
+        margin-bottom: 10px;  /* Espacer le logo et la nav */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;  /* Empiler les liens de navigation */
+        align-items: center;  /* Centrer les liens */
+        gap: 10px;  /* Espacer les liens */
+        position: static;  /* Positionner la nav normalement */
+    }
+
+    nav a {
+        padding: 12px 20px;  /* Plus d'espace pour les boutons sur mobile */
+        font-size: 1.1em;  /* Taille de police légèrement plus grande */
+        width: 100%;  /* Les liens prennent toute la largeur sur mobile */
+        text-align: center;  /* Centrer le texte des liens */
+    }
+}

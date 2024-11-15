@@ -1,0 +1,42 @@
+
+html {
+    height: 100%;
+    margin: 0; 
+}
+
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+.content {
+    flex-grow: 1; 
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #151217;
+    color: #F9D0A3;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-icons a {
+    color: #DA001E;  /* Changer la couleur des icônes */
+    font-size: 2em;  /* Augmenter la taille des icônes */
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);  /* Effet de zoom léger au survol */
+}
